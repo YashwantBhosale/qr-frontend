@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   
       try {
-        const response = await fetch('http://localhost:3000/generate-qr', {
+        const response = await fetch('https://qr-backend-tau.vercel.app/generate-qr', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
   function saveURLToFile(url) {
-    fetch('http://localhost:3000/save-url', {
+    fetch('https://qr-backend-tau.vercel.app/save-url', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
